@@ -20,6 +20,10 @@ public enum PlayingCardSuit {
         return this.friendlyName;
     }
 
+    public String getIcon() {
+        return this.icon;
+    }
+
     public static PlayingCardSuit fromValue(int inputValue) {
         for (PlayingCardSuit cardSuit: values()) {
             if(cardSuit.value == inputValue+1) {

@@ -1,6 +1,7 @@
 package com.timgarrick.cards;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CardService {
     private static CardService instance = null;
@@ -23,14 +24,18 @@ public class CardService {
         return cardList;
     }
 
-    public static void moveCardToCollection(boolean random, int numberOfCardsToPick, CardCollection originalCollection, CardCollection newCollection) {
-        if(random) {
-            originalCollection.shuffle();
-        }
-
+    public void moveCardToCollection(int numberOfCardsToPick, CardCollection originalCollection, CardCollection newCollection) {
         for (int i = 0; i < numberOfCardsToPick; i++) {
             Card card = originalCollection.getCollectionOfCards().remove(originalCollection.getCollectionOfCards().size()-1);
             newCollection.addNewCard(card);
+        }
+    }
+
+    public void dealCards(int numberOfCardsToDeal, CardCollection allCardsInGame, List<Player> listOfPlayers) {
+        for (int i = 0; i < numberOfCardsToDeal; i++) {
+            for (Player player : listOfPlayers) {
+                moveCardToCollection(1, allCardsInGame, player.getPlayersCollection());
+            }
         }
     }
 

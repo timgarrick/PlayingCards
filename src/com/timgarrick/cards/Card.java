@@ -13,8 +13,12 @@ public class Card {
         this.cardValue = cardValue;
     }
 
+    public int cardValue(){
+        return cardValue.getValue();
+    }
+
     @Override
     public String toString() {
-        return "Card is " + cardValue.getFriendlyName() + " of " + cardSuit.getFriendlyName();
+        return cardValue.getShortName() + cardSuit.getIcon();
     }
 }

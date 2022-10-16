@@ -15,7 +15,7 @@ public class PlayingCardsTests {
         //Create our cards
         myCardCollectionOfCards.setCollectionOfCards(cardService.createListOfCards(52));
 
-        cardService.moveCardToCollection(false, 1, myCardCollectionOfCards, myCardCollectionOfRandomCards);
+        cardService.moveCardToCollection(1, myCardCollectionOfCards, myCardCollectionOfRandomCards);
 
         System.out.println("=Original CardCollection of cards=======");
         myCardCollectionOfCards.outputCardDeckToConsole();

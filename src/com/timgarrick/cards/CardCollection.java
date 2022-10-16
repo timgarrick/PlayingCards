@@ -36,4 +36,14 @@ public class CardCollection {
         }
     }
 
+/*    public int getValueOfCards()
+    {
+        int total = 0;
+        for (Card card:collectionOfCards) {
+            total += card.cardValue();
+        }
+
+        return total;
+    }*/
+
 }

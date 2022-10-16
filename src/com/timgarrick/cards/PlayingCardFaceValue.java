@@ -29,6 +29,10 @@ public enum PlayingCardFaceValue {
         return this.friendlyName;
     }
 
+    public int getValue(){
+        return this.value;
+    }
+
     public String getShortName() {
         return this.shortName;
     }

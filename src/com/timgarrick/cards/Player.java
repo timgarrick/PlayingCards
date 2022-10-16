@@ -1,22 +1,22 @@
 package com.timgarrick.cards;
 
 public class Player {
-    private CardCollection playersCards;
+    private CardCollection playersCollection;
     private String name;
     private int score;
 
-    public Player(CardCollection playersCards, String name, int score) {
-        this.playersCards = playersCards;
+    public Player(CardCollection playersCollection, String name, int score) {
+        this.playersCollection = playersCollection;
         this.name = name;
         this.score = score;
     }
 
-    public CardCollection getPlayersCards() {
-        return playersCards;
+    public CardCollection getPlayersCollection() {
+        return playersCollection;
     }
 
-    public void setPlayersCards(CardCollection playersCards) {
-        this.playersCards = playersCards;
+    public void setPlayersCollection(CardCollection playersCollection) {
+        this.playersCollection = playersCollection;
     }
 
     public String getName() {
@@ -27,6 +27,14 @@ public class Player {
         this.name = name;
     }
 
+    public int updateScore(){
+        this.score = 0;
+        for (Card card: playersCollection.getCollectionOfCards()) {
+            this.score += card.cardValue();
+        }
+        return score;
+    }
+
     public int getScore() {
         return score;
     }
@@ -34,4 +42,6 @@ public class Player {
     public void setScore(int score) {
         this.score = score;
     }
+
+
 }
