@@ -1,12 +1,14 @@
-package com.timgarrick;
+package com.timgarrick.cards;
+
+import java.util.ArrayList;
 
 public class Card {
-    private int sortValue;
+    private int cardIndex;
     private PlayingCardSuit cardSuit;
     private PlayingCardFaceValue cardValue;
 
-    public Card(int sortValue, PlayingCardSuit cardSuit, PlayingCardFaceValue cardValue) {
-        this.sortValue = sortValue;
+    public Card(int cardIndex, PlayingCardSuit cardSuit, PlayingCardFaceValue cardValue) {
+        this.cardIndex = cardIndex;
         this.cardSuit = cardSuit;
         this.cardValue = cardValue;
     }

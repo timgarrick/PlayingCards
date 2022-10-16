@@ -1,16 +1,18 @@
-package com.timgarrick;
+package com.timgarrick.cards;
 
-enum PlayingCardSuit {
-    CLUB("Clubs",1),
-    DIAMOND("Diamonds",2),
-    HEART("Hearts",3),
-    SPADE("Spades",4);
+public enum PlayingCardSuit {
+    CLUB("Clubs","♧",1),
+    DIAMOND("Diamonds","♢",2),
+    HEART("Hearts","♡",3),
+    SPADE("Spades","♤",4);
 
     private String friendlyName;
+    private String icon;
     private int value;
 
-    private PlayingCardSuit(String name, int value) {
+    private PlayingCardSuit(String name, String icon, int value) {
         this.friendlyName = name;
+        this.icon = icon;
         this.value = value;
     }
 
