@@ -78,6 +78,7 @@ public class Blackjack {
                             console.outputText("You scored over 21, you lost!");
                             playerLoop = false;
                             gameIsRunning = false;
+                            dealerLoop = false;
                         }
                         break;
 

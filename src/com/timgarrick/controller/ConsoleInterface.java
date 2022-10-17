@@ -37,4 +37,11 @@ public class ConsoleInterface {
         System.out.println("   Your hand: " + allPlayersInGame.get(1).getPlayersCollection().getCollectionOfCards().toString());
         System.out.println("");
     }
+
+    public void outputPlayerStateToConsole(List<Player> allPlayersInGame) {
+        for (Player player:allPlayersInGame) {
+            System.out.println("Player " + player.getName() + " has "
+                    + player.getPlayersCollection().getCollectionOfCards().size() + " cards.");
+        }
+    }
 }

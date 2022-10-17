@@ -24,10 +24,22 @@ public class CardService {
         return cardList;
     }
 
+    public Card viewCardOnBottomOfDeck(CardCollection cardCollection) {
+        return cardCollection.getCollectionOfCards().get(cardCollection.getCollectionOfCards().size()-1);
+    }
+
     public void moveCardToCollection(int numberOfCardsToPick, CardCollection originalCollection, CardCollection newCollection) {
         for (int i = 0; i < numberOfCardsToPick; i++) {
             Card card = originalCollection.getCollectionOfCards().remove(originalCollection.getCollectionOfCards().size()-1);
             newCollection.addNewCard(card);
+        }
+    }
+
+    public void moveAllCardsToCollection(CardCollection originalCollection, CardCollection newCollection) {
+        for (Card card:originalCollection.getCollectionOfCards()) {
+            newCollection.getCollectionOfCards().add(originalCollection.getCollectionOfCards()
+                                                .remove(originalCollection.getCollectionOfCards().size()-1));
+
         }
     }
 
